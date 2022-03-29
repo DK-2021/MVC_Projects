@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketTracker", "TicketTracker\TicketTracker.csproj", "{0C3CC3EC-5238-49A3-AEDC-1F917E735D8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketTrackerModels", "TicketTrackerModels\TicketTrackerModels.csproj", "{6F9F67D4-8C14-4B21-B49E-CD6992BE866C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaesarEncryptor", "CaesarEncryptor\CaesarEncryptor.csproj", "{D1619EB5-1E3E-45E0-B05B-3DF6FEBC2441}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C3CC3EC-5238-49A3-AEDC-1F917E735D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C3CC3EC-5238-49A3-AEDC-1F917E735D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C3CC3EC-5238-49A3-AEDC-1F917E735D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C3CC3EC-5238-49A3-AEDC-1F917E735D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F9F67D4-8C14-4B21-B49E-CD6992BE866C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9F67D4-8C14-4B21-B49E-CD6992BE866C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9F67D4-8C14-4B21-B49E-CD6992BE866C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9F67D4-8C14-4B21-B49E-CD6992BE866C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1619EB5-1E3E-45E0-B05B-3DF6FEBC2441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1619EB5-1E3E-45E0-B05B-3DF6FEBC2441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1619EB5-1E3E-45E0-B05B-3DF6FEBC2441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1619EB5-1E3E-45E0-B05B-3DF6FEBC2441}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {185BDE4A-1B7E-4765-9C35-AA9F0820A970}
+	EndGlobalSection
+EndGlobal

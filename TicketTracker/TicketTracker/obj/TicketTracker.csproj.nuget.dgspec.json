@@ -1,0 +1,208 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTracker\\TicketTracker.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\CaesarEncryptor\\CaesarEncryptor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\CaesarEncryptor\\CaesarEncryptor.csproj",
+        "projectName": "CaesarEncryptor",
+        "projectPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\CaesarEncryptor\\CaesarEncryptor.csproj",
+        "packagesPath": "C:\\Users\\danke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\CaesarEncryptor\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTrackerModels\\TicketTrackerModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTrackerModels\\TicketTrackerModels.csproj",
+        "projectName": "TicketTrackerModels",
+        "projectPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTrackerModels\\TicketTrackerModels.csproj",
+        "packagesPath": "C:\\Users\\danke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTrackerModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTracker\\TicketTracker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTracker\\TicketTracker.csproj",
+        "projectName": "TicketTracker",
+        "projectPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTracker\\TicketTracker.csproj",
+        "packagesPath": "C:\\Users\\danke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTracker\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\danke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\CaesarEncryptor\\CaesarEncryptor.csproj": {
+                "projectPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\CaesarEncryptor\\CaesarEncryptor.csproj"
+              },
+              "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTrackerModels\\TicketTrackerModels.csproj": {
+                "projectPath": "C:\\Users\\danke\\Github\\.NET_MVC_MSSA\\TicketTracker\\TicketTrackerModels\\TicketTrackerModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

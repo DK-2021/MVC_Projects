@@ -1,0 +1,12 @@
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\bin\Debug\net6.0\CaesarEncryptor.deps.json
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\bin\Debug\net6.0\CaesarEncryptor.dll
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\bin\Debug\net6.0\CaesarEncryptor.pdb
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.csproj.AssemblyReference.cache
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.AssemblyInfoInputs.cache
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.AssemblyInfo.cs
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.csproj.CoreCompileInputs.cache
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.dll
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\refint\CaesarEncryptor.dll
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\CaesarEncryptor.pdb
+C:\Users\danke\Github\.NET_MVC_MSSA\TicketTracker\CaesarEncryptor\obj\Debug\net6.0\ref\CaesarEncryptor.dll

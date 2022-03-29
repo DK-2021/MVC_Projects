@@ -1,0 +1,22 @@
+Needs:
+.int Id 
+.string Issue - summary of problem
+.string Description
+.string Resolution information
+.int created due/completed/started dates of issues
+.(Enum) int Priority rating
+.string created by userId
+.string tech assigned to issue
+.(Enum) int status of issue 
+.int hours of labor
+.string StakeholderEmails: unlimited amount of emails may be stored to update progress 
+
+Category Object:
+.Id
+.string name
+.string description (UI, JS, etc..)
+.bool isActive (issue)
+
+Nice to have:
+Ticket history table for auditing
+place to hang images of screenshots or files

@@ -1,0 +1,114 @@
+﻿@model IEnumerable<TicketTrackerModels.Ticket>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Issue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resolution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompletedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketPriority)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketCreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TechAssigned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoursOfLabor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StakeholderEmails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Issue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resolution)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompletedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketPriority)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketCreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TechAssigned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoursOfLabor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StakeholderEmails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a asp-action="QuickDetails" asp-route-id="@item.Id">Quick Details</a>|
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

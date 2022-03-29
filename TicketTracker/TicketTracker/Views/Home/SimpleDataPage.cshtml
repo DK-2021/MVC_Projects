@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+@{
+}
+<h1>Data</h1>
+<ul>
+    @foreach (var item in @Model)
+    {
+        <li>
+            @item
+        </li>        
+    }
+</ul>
+
+
+<h1>@ViewData["myCustomKey"]</h1>
+
