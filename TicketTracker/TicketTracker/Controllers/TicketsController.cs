@@ -8,24 +8,38 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TicketTracker.Data;
 using TicketTracker.Models;
+using TicketTracker.Services;
 using TicketTrackerModels;
 
 namespace TicketTracker.Controllers
 {
     public class TicketsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ITicketService _ticketservice;
+        private readonly ICategoriesService _categoriesservice;
+        private IList<Category> _categories;
 
-        public TicketsController(ApplicationDbContext context)
+        private async Task GetCategoriesSelectList()
         {
-            _context = context;
+            _categories = await _categoriesservice.GetCategories();
+        }
+        private List<Category> GetCategories()
+        {
+            return Task.Run(async () => await _categoriesservice.GetCategories()).Result;
+        }
+
+        public TicketsController(ITicketService ticketService, ICategoriesService categoriesService)
+        {
+            _ticketservice = ticketService;
+            _categoriesservice = categoriesService;
+            GetCategoriesSelectList();
         }
 
         // GET: Tickets
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Tickets.Include(t => t.Category);
-            return View(await applicationDbContext.ToListAsync());
+            var tickets = await _ticketservice.GetTickets();
+            return View(tickets);
         }
 
         // GET: Tickets/Details/5
@@ -36,9 +50,7 @@ namespace TicketTracker.Controllers
                 return NotFound();
             }
 
-            var ticket = await _context.Tickets
-                .Include(t => t.Category)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var ticket = await _ticketservice.GetTicket(id);
             if (ticket == null)
             {
                 return NotFound();
@@ -48,16 +60,9 @@ namespace TicketTracker.Controllers
         }
         public async Task<IActionResult> QuickDetails(int? id)
         {
-            var ticket = await _context.Tickets
-                .Include(t => t.Category)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            var tvm = new TicketViewModel();
-            tvm.Id = ticket.Id;
-            tvm.Issue = ticket.Issue;
-            tvm.Priority = ticket.TicketPriority;
-            tvm.Status = ticket.TicketStatus;
-            tvm.TechAssigned = ticket.TechAssigned;
-            return View(tvm);
+            var ticket = await _ticketservice.GetQuickDetailTicket(id);
+            
+            return View(ticket);
             
         }
 
@@ -65,7 +70,8 @@ namespace TicketTracker.Controllers
         // GET: Tickets/Create
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
+            _categories = GetCategories();
+            ViewData["CategoryId"] = new SelectList(_categories, "Id", "Name");
             var items = Enum.GetNames(typeof(Priority)).ToList();
             ViewData["Priority"] = new SelectList(items);
             var items2 = Enum.GetNames(typeof(Status)).ToList();
@@ -82,11 +88,11 @@ namespace TicketTracker.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(ticket);
-                await _context.SaveChangesAsync();
+                await _ticketservice.Add(ticket);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", ticket.CategoryId);
+            await GetCategoriesSelectList();
+            ViewData["CategoryId"] = new SelectList(_categories, "Id", "Name", ticket.CategoryId);
             return View(ticket);
         }
 
@@ -98,12 +104,17 @@ namespace TicketTracker.Controllers
                 return NotFound();
             }
 
-            var ticket = await _context.Tickets.FindAsync(id);
+            var ticket = await _ticketservice.Find((int)id);
             if (ticket == null)
             {
                 return NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Description", ticket.CategoryId);
+            await GetCategoriesSelectList();
+            ViewData["CategoryId"] = new SelectList(_categories, "Id", "Name", ticket.CategoryId);
+            var items = Enum.GetNames(typeof(Priority)).ToList();
+            ViewData["Priority"] = new SelectList(items);
+            var items2 = Enum.GetNames(typeof(Status)).ToList();
+            ViewData["Status"] = new SelectList(items2);
             return View(ticket);
         }
 
@@ -123,8 +134,7 @@ namespace TicketTracker.Controllers
             {
                 try
                 {
-                    _context.Update(ticket);
-                    await _context.SaveChangesAsync();
+                    await _ticketservice.Update(ticket);                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -139,7 +149,12 @@ namespace TicketTracker.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Description", ticket.CategoryId);
+            await GetCategoriesSelectList();
+            ViewData["CategoryId"] = new SelectList(_categories, "Id", "Name", ticket.CategoryId);
+            var items = Enum.GetNames(typeof(Priority)).ToList();
+            ViewData["Priority"] = new SelectList(items);
+            var items2 = Enum.GetNames(typeof(Status)).ToList();
+            ViewData["Status"] = new SelectList(items2);
             return View(ticket);
         }
 
@@ -151,9 +166,7 @@ namespace TicketTracker.Controllers
                 return NotFound();
             }
 
-            var ticket = await _context.Tickets
-                .Include(t => t.Category)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var ticket = await _ticketservice.GetTicket(id);
             if (ticket == null)
             {
                 return NotFound();
@@ -167,15 +180,15 @@ namespace TicketTracker.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var ticket = await _context.Tickets.FindAsync(id);
-            _context.Tickets.Remove(ticket);
-            await _context.SaveChangesAsync();
+            await _ticketservice.Delete(id);
+            
             return RedirectToAction(nameof(Index));
         }
 
         private bool TicketExists(int id)
         {
-            return _context.Tickets.Any(e => e.Id == id);
+            var ticket = _ticketservice.GetTicket(id);
+            return ticket != null;
         }
     }
 }
